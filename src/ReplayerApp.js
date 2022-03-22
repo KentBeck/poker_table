@@ -5,6 +5,10 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row } from 'react-bootstrap';
 
+function Replayer() {
+    
+}
+
 function back() {
   console.log("howdy");
 }
@@ -13,7 +17,7 @@ function forward() {
   // I want to change the state to a different hand. How do I do that?
 }
 
-function App() {
+function ReplayerApp() {
   const hand = new HandHistory('KB', 'AdJh');
   hand.sit('KB', 100);
   hand.sit('BA', 200);
@@ -52,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default ReplayerApp;
