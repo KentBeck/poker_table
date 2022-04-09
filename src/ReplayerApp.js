@@ -6,6 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Col, Row } from 'react-bootstrap';
 
 class Replayer {
+    // Tests:
+    // Initial condition, after all the sits (also weird temporal coupling)
+    // Forward in various scenarios
+    // Back in various scenarios
+    // Enable/disable forward & back
     forward() {
         console.log("inside");
     }
@@ -13,7 +18,7 @@ class Replayer {
         console.log("back");
     }
 
-    hand1() {
+    hand() {
         return new HandHistory('KB', 'AdJh')
             .sit('KB', 100)
             .sit('BA', 200)
@@ -47,7 +52,7 @@ function ReplayerApp() {
                         <Button onClick={replayer.back}>Back</Button>
                     </Col>
                     <Col>
-                        <PokerTable hand={replayer.hand1()} />
+                        <PokerTable hand={replayer.hand()} />
                     </Col>
                     <Col>
                         <Button onClick={replayer.forward}>Forward</Button>
